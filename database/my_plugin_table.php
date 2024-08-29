@@ -13,6 +13,9 @@ function pluginprefix_install() {
         myCert VARCHAR(36) NULL,
         myMeli VARCHAR(12) NULL,
         myPic TEXT NOT NULL,
+
+
+        52820114
         myPhone VARCHAR(12) NULL,
         myListening VARCHAR(12) NULL,
         myReading VARCHAR(12) NULL,
@@ -22,7 +25,7 @@ function pluginprefix_install() {
         myDate VARCHAR(12) NULL,
         date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
         PRIMARY KEY  (id)
-      ) $charset_collate;";
+      ) $charset_collate;
       
       require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
       dbDelta( $sql );
