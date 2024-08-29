@@ -1,0 +1,528 @@
+html{
+    font-size: 62.5%;
+    font-family: inter;
+    overflow-x: hidden;
+    direction: ltr;
+}
+body{
+    direction: ltr;    
+}
+.certificate-form{
+    max-width: 100rem;
+    margin: 0 auto 9.2rem auto;
+}
+.header-form{
+    font-size: 4.8rem;
+    color: #343a40;
+    margin-bottom: 6.4rem;
+    position: relative;
+}
+.header-form::after{
+    content: " ";
+    width: 25rem;
+    display: inline-block;
+    height: 5px;
+    background: linear-gradient(to right ,#0740a5, #66ccf2);
+    position: absolute;
+   left: 0px; 
+   top: 6.5rem;
+}
+/* the certificate form should be redesigned after */
+.certificate-forme-input{
+    max-width: 100rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+display: grid;
+grid-template-columns: 1fr;
+gap: 3.2rem;
+}
+.certificate-forme-input div{
+    display: flex;
+   flex-direction: column;
+}
+.certificate-forme-input label{
+font-size: 2.2rem;
+margin-bottom: 2px;
+text-align: center;
+}
+.certificate-forme-input label::after{
+        content:" *";
+        color: red;
+}
+.certificate-forme-input input{
+width: 30rem;
+height: 5.2rem;
+border: 1px solid #66ccf2;
+border-radius: 5px;
+background-color: #E0F5FC;
+font-size: 2.2rem;
+padding: 0 1.6rem;
+caret-color: #0740a5;
+}
+.certificate-forme-input input:focus{
+outline: 1px solid #0740a5;
+border: none;
+}
+.btn-certificate {
+  border-radius: 5px;
+  background-color: #66ccf2;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1.6rem;
+  width: 30rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  display: inline-block;
+  position: relative;
+}
+.btn-certificate:after {
+    content: '»';
+    position: absolute;
+    font-size: 2.4rem;
+    opacity: 0;  
+    top: 11px;
+    right: -2rem;
+    transition: 0.5s;
+  }
+  .btn-certificate:hover{
+    padding-right: 2.4rem;
+    padding-left:8px;
+  }
+  .btn-certificate:hover:after {
+    opacity: 1;
+    right: 1rem;
+  } 
+  /* Warning-box */
+
+  /* start style from cert new version */
+/* css reset */
+*,
+a,
+li,
+p,
+div,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+/* end css reset */
+/* start insert font*/
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: bolder;
+  src: url("../fonts/Gilroy-Black.woff") format("woff"),
+  url("../fonts/Gilroy-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: bolder;
+  src: url("../fonts/Gilroy-BlackItalic.woff") format("woff"),
+  url("../fonts/Gilroy-BlackItalic.woff2") format("woff2");
+
+}
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Gilroy-Bold.woff") format("woff"),
+  url("../fonts/Gilroy-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Gilroy-BoldItalic.woff") format("woff"),
+  url("../fonts/Gilroy-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Gilroy-Extrabold.woff") format("woff"),
+  url("../fonts/Gilroy-Extrabold.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: 800;
+  src: url("../fonts/Gilroy-ExtraboldItalic.woff") format("woff"),
+  url("../fonts/Gilroy-ExtraboldItalic.woff2") format("woff2")
+  ;
+}
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Gilroy-Semibold.woff") format("woff"),
+  url("../fonts/Gilroy-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Gilroy-SemiboldItalic.woff" )format("woff"),
+  url("../fonts/Gilroy-SemiboldItalic.woff2" )format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff"),
+  url("../fonts/Gilroy-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/Gilroy-MediumItalic.woff") format("woff"),
+  url("../fonts/Gilroy-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 450;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff"),
+  url("../fonts/Gilroy-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: 450;
+  src: url("../fonts/Gilroy-RegularItalic.woff") format("woff"),
+  url("../fonts/Gilroy-RegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Gilroy-Light.woff") format("woff"),
+  url("../fonts/Gilroy-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: gilroy;
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Gilroy-LightItalic.woff") format("woff"),
+  url("../fonts/Gilroy-LightItalic.woff2") format("woff2");
+}
+
+/* end insert font*/
+
+.cert_container{ 
+  font-family: 'gilroy';
+  font-weight: 600;
+    width: 720px;
+    margin: 0 auto;
+    background-color: #c3c4c5;
+    padding: 0 32px;
+}
+ /* start header_container  */
+
+.header_container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    padding: 12px 0;
+}
+.header_container .QRmass {
+  justify-self: end;
+}
+.header_container .QRmass img{
+    width: 120px;
+    
+}
+.header_container .title_container{
+  line-height: 1.2;
+}
+.header_container .title_container .title{
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.header_container .title_container .sub_title{
+  display: block;
+  margin-bottom: 10px;
+}
+.divider_shadow{
+  box-shadow: 0px 1px   #0740a5 , 0px 2px  #66ccf2;
+}
+
+/* end header_container */
+
+/* start std_info_container  */
+.std_info_container{
+  display: grid;
+  grid-template-columns: 1fr 120px;
+}
+.std_info_text{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 12px 2px 12px 12px;
+}
+.std_info_text .std_info_text_part{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.std_info_img img{
+  margin-top: 2px;
+ width: 120px; 
+}
+/* end std_info_container  */
+
+/* start result_of_all_semesters-container  */
+.result_of_all_semesters-container-parts{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-bottom: 12px;
+}
+.course_title{
+  margin: 24px 0 32px 0;
+}
+.active_level{
+    background-image: linear-gradient(to right, #0740a5, #66ccf2,#ffffff00);
+}
+.active_level .course_level_title{
+color: #fff;
+}
+.result_of_all_semesters-part{
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 8px;
+}
+
+.course_level_title{
+  font-size: 56px;
+  font-weight: bold;
+  justify-self: center;
+}
+.result_of_all_semesters-part .semester_grades{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 4px;
+}
+.result_of_all_semesters-part .semester_grades .semester_grade_container{
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: auto 1fr;
+  grid-gap: 4px;
+  justify-items: center;
+}
+.result_of_all_semesters-part .semester_grades .semester_grade_container .semester_grade_title{
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* end result_of_all_semesters-container  */
+
+/* start result_this_semester  */
+.result_this_semester{
+  padding-bottom: 24px;
+}
+.result_this_semester_skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 32px;
+}
+.skills_container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+ align-items: center;
+ grid-gap: 4px;
+}
+.semester_grade_box , .skills_num_box{
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #66ccf2;
+  border-radius: 8px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.set_pass_fail{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 8px;
+}
+.set_pass_fail div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 4px;
+}
+.set_pass_fail div img{
+  width: 24px;
+}
+.result_this_semester .result_this_semester_title{
+margin: 24px 0 32px 0;
+}
+
+/* end result_this_semester  */
+
+/* start signature_container  */
+.signature_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 24px 032px;
+}
+.signature_container img{
+  width: 160px;
+}
+.signature_container_part{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 24px 1fr;
+}
+
+.signature_container_part :last-child{
+  align-self: center;
+}
+
+/* end signature_container  */
+
+  /* end style from cert new version */
